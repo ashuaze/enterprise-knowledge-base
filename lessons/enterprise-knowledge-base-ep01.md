@@ -45,6 +45,15 @@ export function scopeFor(fixture: PrincipalFixture, asOf = FIXTURE_TODAY, subjec
 
 例如 `scopeFor('employee', '2026-11-18', 'contractor')` 会保留员工的 `principal`，把业务对象置为 `contractor`。如果省略 `subject`，就使用提问者的默认业务对象。访问权限继续按当前提问者判断。产品如果从自然语言提取到「外包同事」，可在检索前确认业务对象；歧义会改变办理入口时，可以向用户澄清，或同时展示各自有明确条件的入口。
 
+把这次代查拆成四个字段，可以看清哪个值影响哪一步。
+
+| 字段 | 值从哪里来 | 本次代查的作用 |
+| --- | --- | --- |
+| `q` | 搜索请求 | 「更换手机后怎么重新绑定登录验证（MFA）？」用于匹配标题和段落。 |
+| `principal` | HTTP 层验证演示身份后，由服务端生成 | 普通员工。有权读内部资料，直接读取管理员手册仍会被拒绝。 |
+| `subject` | 请求明确指定，省略时取提问者的默认业务对象 | `contractor`。为外包同事代查，适用外包换机流程。 |
+| `asOf` | HTTP 参数 `as_of` 转入查询范围；省略时使用服务时钟 | `2026-11-18`。决定哪天的制度版本有资格进入排序；本地实验用固定时钟复现。 |
+
 读者可以先盖住下面的预期列，逐行推导。
 
 | 提问者 | 业务对象 | 业务日期 | 预期证据 |
@@ -69,6 +78,35 @@ export function scopeFor(fixture: PrincipalFixture, asOf = FIXTURE_TODAY, subjec
 | 索引片段 `IndexedChunk` | 片段 ID、索引代次、对应证据范围、分词或向量字段 | 切片、索引或检索配置重建时可替换 | 召回、融合、排序、索引切换 |
 
 如果一个片段覆盖表头、表格行和一段注释，记录它引用的证据范围。搜索接口交付的是版本和原文引用，评测也给证据打标。第 04 期比较切片方案时，新旧索引仍可用同一套标注比较。来源链接最好定位到带版本的原文快照；只有可变 Wiki URL 的来源，需要保留快照才能复核搜索当时引用的文字。
+
+### 一条版本记录里有哪些字段
+
+下面是配套语料 `fixtures/versions.json` 中的员工版换机指南。它给搜索服务判断候选资格所需的信息。
+
+```json
+{
+  "document_id": "mfa-rebind",
+  "version_id": "mfa-rebind-v2",
+  "title": "验证器迁移操作指引｜登录验证",
+  "owner": "IT 身份与访问组",
+  "source": "it-handbook",
+  "status": "published",
+  "valid_from": "2026-10-01",
+  "valid_until": null,
+  "access": "internal",
+  "audience": [
+    "employee"
+  ]
+}
+```
+
+用这条记录可以解释三个设计决策。
+
+- **同一文档可以有多个版本。** `document_id` 用于把新版和旧版归为同一份指南，`version_id` 用于打开具体原件和定位版本。文档改标题时，可以继续用 `document_id` 识别它。
+- **可见范围与业务对象分开存。** `access: "internal"` 表示该版可供已认证的内部演示身份阅读，`audience: ["employee"]` 表示换机步骤针对员工。外包人员可能有阅读资格，系统为外包办理时会筛掉这条员工版流程。
+- **发布状态与有效区间共同决定版本资格。** `status` 用于排除草案，`valid_from` 和 `valid_until` 用于选择指定日期的规则。`source` 和 `owner` 记录来源与维护责任，方便追溯和复核。
+
+语料加载时会把上面的版本记录和同版本 Markdown 原文关联起来。每个证据段保留 `anchor`（段落锚点）、`heading`（原文小节标题）和 `text`（段落正文）。把 `version_id` 与 `anchor` 组合，就得到 `mfa-rebind-v2#steps`。以后切片或重建索引时，索引片段继续指向原文证据。
 
 ### 版本字段要表达业务生效日
 
@@ -153,6 +191,30 @@ if (availability === 'expired' && !options.omitExpiryForReplay) {
 ```
 
 `canRead` 按提问者身份判断，`appliesTo` 按业务对象判断。随后调用同一个版本函数。过期 ID 供本地回放解释候选去向。`omitExpiryForReplay` 只在 A 组实验开关中使用，正常 HTTP 搜索调用采用默认行为，过滤失效版本。这样才能固定资料和打分函数，只改变一条逻辑验证根因。
+
+### 搜索响应怎样带读者回到原文
+
+普通员工为自己查换机步骤，显式传入 `as_of=2026-11-18`、`subject=employee`、`limit=1` 时，配套接口返回以下结果。
+
+```json
+{
+  "as_of": "2026-11-18",
+  "subject": "employee",
+  "results": [
+    {
+      "document_id": "mfa-rebind",
+      "version_id": "mfa-rebind-v2",
+      "evidence_ref": "mfa-rebind-v2#steps",
+      "title": "验证器迁移操作指引｜登录验证",
+      "section": "更换手机时的操作",
+      "snippet": "旧手机还能使用时，更换手机后的登录验证（MFA）重新绑定在账号中心完成：进入「安全设置」→「验证器迁移」，先用旧手机确认，再扫码添加新手机。",
+      "source_url": "/sources/mfa-rebind-v2?as_of=2026-11-18&subject=employee#steps"
+    }
+  ]
+}
+```
+
+`title`、`section` 和 `snippet` 用于呈现依据。响应顶层的 `as_of` 和 `subject` 让读者知道系统判定的是哪天、哪类对象。点击来源时，`source_url` 把版本、业务日期和适用对象带到来源页。页面用 `#steps` 找到原文段落；来源接口根据打开链接的人重新做读取检查。
 
 ### 用户打开来源时再检查一次
 
