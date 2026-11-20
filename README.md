@@ -11,6 +11,10 @@
 | 期数 | 主题 | 配套材料 |
 | --- | --- | --- |
 | 01 | [企业知识库如何判定一条搜索结果可以交付？](lessons/enterprise-knowledge-base-ep01.md) | [源码、合成语料与回放](projects/week-01/README.md) |
+| 02 | [企业资料散在各处，怎样收集并接入知识库？](lessons/enterprise-knowledge-base-ep02.md) | 正文含核心 TypeScript 示例 |
+| 03 | [从 PDF、图片、表格和办公文档中得到可信内容](lessons/enterprise-knowledge-base-ep03.md) | 正文含核心 TypeScript 示例 |
+| 04 | [内容已经读出来，怎样切成能搜索和引用的证据？](lessons/enterprise-knowledge-base-ep04.md) | 正文含核心 TypeScript 示例 |
+| 05 | [原件、切片和索引各存哪里，什么时候算入库成功？](lessons/enterprise-knowledge-base-ep05.md) | 正文含核心 TypeScript 示例 |
 
 ## 首季路线
 
