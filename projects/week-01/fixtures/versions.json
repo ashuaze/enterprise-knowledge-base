@@ -1,0 +1,323 @@
+[
+  {
+    "document_id": "mfa-rebind",
+    "version_id": "mfa-rebind-v1",
+    "title": "更换手机：登录验证、MFA 重新绑定指南",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": "2026-10-01",
+    "access": "internal",
+    "audience": [
+      "employee"
+    ]
+  },
+  {
+    "document_id": "mfa-rebind",
+    "version_id": "mfa-rebind-v2",
+    "title": "验证器迁移操作指引｜登录验证",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-10-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee"
+    ]
+  },
+  {
+    "document_id": "mfa-rebind",
+    "version_id": "mfa-rebind-v3",
+    "title": "更换手机：MFA 重新绑定试行草案",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "draft",
+    "valid_from": "2026-11-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee"
+    ]
+  },
+  {
+    "document_id": "mfa-rebind",
+    "version_id": "mfa-rebind-v4",
+    "title": "更换手机与 MFA 重新绑定",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-12-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee"
+    ]
+  },
+  {
+    "document_id": "mfa-faq",
+    "version_id": "mfa-faq-v1",
+    "title": "服务台常见问题：登录验证原理",
+    "owner": "IT 服务台",
+    "source": "service-desk-faq",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "mfa-contractor",
+    "version_id": "mfa-contractor-v1",
+    "title": "外包账号：验证设备更换",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "mfa-admin",
+    "version_id": "mfa-admin-v1",
+    "title": "KB-4032 管理员处置手册",
+    "owner": "IT 身份与访问组",
+    "source": "restricted-ops",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "it-admin",
+    "audience": [
+      "employee"
+    ]
+  },
+  {
+    "document_id": "mfa-error",
+    "version_id": "mfa-error-v1",
+    "title": "自助验证器恢复错误说明",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee"
+    ]
+  },
+  {
+    "document_id": "password-reset",
+    "version_id": "password-reset-v1",
+    "title": "内网密码重置",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "password-expiry",
+    "version_id": "password-expiry-v1",
+    "title": "密码到期后的操作",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "wifi-mac",
+    "version_id": "wifi-mac-v1",
+    "title": "macOS 办公 Wi-Fi 接入",
+    "owner": "IT 终端组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee"
+    ]
+  },
+  {
+    "document_id": "wifi-guest",
+    "version_id": "wifi-guest-v1",
+    "title": "访客 Wi-Fi 申请",
+    "owner": "IT 终端组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "vpn-error",
+    "version_id": "vpn-error-v1",
+    "title": "VPN-104 连接错误指引",
+    "owner": "IT 网络组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "vpn-contractor",
+    "version_id": "vpn-contractor-v1",
+    "title": "外包人员 VPN 接入",
+    "owner": "IT 网络组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "vpn-client",
+    "version_id": "vpn-client-v1",
+    "title": "VPN 客户端更新",
+    "owner": "IT 网络组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "email-setup",
+    "version_id": "email-setup-v1",
+    "title": "邮箱客户端配置",
+    "owner": "IT 协作组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "email-quota",
+    "version_id": "email-quota-v1",
+    "title": "邮箱容量告警",
+    "owner": "IT 协作组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "disk-recovery",
+    "version_id": "disk-recovery-v1",
+    "title": "BitLocker 恢复密钥查询",
+    "owner": "IT 终端组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "software-order",
+    "version_id": "software-order-v1",
+    "title": "公司软件安装申请",
+    "owner": "IT 终端组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "asset-return",
+    "version_id": "asset-return-v1",
+    "title": "离场设备归还",
+    "owner": "IT 资产组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "atlas-account",
+    "version_id": "atlas-account-v1",
+    "title": "项目账号申请入口",
+    "owner": "IT 身份与访问组",
+    "source": "it-handbook",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  },
+  {
+    "document_id": "service-desk",
+    "version_id": "service-desk-v1",
+    "title": "IT 服务台工单入口",
+    "owner": "IT 服务台",
+    "source": "service-desk-faq",
+    "status": "published",
+    "valid_from": "2026-01-01",
+    "valid_until": null,
+    "access": "internal",
+    "audience": [
+      "employee",
+      "contractor"
+    ]
+  }
+]

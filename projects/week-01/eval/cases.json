@@ -1,0 +1,22 @@
+[
+  {"case_id":"it-01","query":"更换手机后怎么重新绑定登录验证（MFA）？","principal_fixture":"employee","evidence_refs":["mfa-rebind-v2#steps"],"acceptable_outcome":"evidence","tags":["旧版干扰","多词查询"]},
+  {"case_id":"it-02","query":"更换手机后怎么重新绑定登录验证（MFA）？","principal_fixture":"employee","as_of":"2026-09-30","evidence_refs":["mfa-rebind-v1#steps"],"acceptable_outcome":"evidence","tags":["显式历史","旧版干扰"]},
+  {"case_id":"it-03","query":"更换手机后怎么重新绑定登录验证（MFA）？","principal_fixture":"employee","as_of":"2026-10-01","evidence_refs":["mfa-rebind-v2#steps"],"acceptable_outcome":"evidence","tags":["显式历史","切换日"]},
+  {"case_id":"it-04","query":"更换手机后怎么重新绑定登录验证（MFA）？","principal_fixture":"employee","subject":"contractor","evidence_refs":["mfa-contractor-v1#steps"],"acceptable_outcome":"evidence","tags":["适用范围","提问者与业务对象"]},
+  {"case_id":"it-05","query":"更换手机后怎么重新绑定登录验证（MFA）？","principal_fixture":"contractor","evidence_refs":["mfa-contractor-v1#steps"],"acceptable_outcome":"evidence","tags":["适用范围","默认业务对象"]},
+  {"case_id":"it-06","query":"KB-4032 怎么处理","principal_fixture":"employee","evidence_refs":["mfa-error-v1#cooldown"],"acceptable_outcome":"evidence","tags":["错误码","权限"]},
+  {"case_id":"it-07","query":"KB-4032 管理员处置","principal_fixture":"it-admin","evidence_refs":["mfa-admin-v1#unlock"],"acceptable_outcome":"evidence","tags":["错误码","权限"]},
+  {"case_id":"it-08","query":"KB-4032 管理员处置","principal_fixture":"employee","evidence_refs":["mfa-error-v1#cooldown"],"acceptable_outcome":"evidence","tags":["错误码","权限"]},
+  {"case_id":"it-09","query":"旧手机遗失 验证器恢复","principal_fixture":"employee","evidence_refs":["mfa-rebind-v2#lost"],"acceptable_outcome":"evidence","tags":["多词查询","证据段落"]},
+  {"case_id":"it-10","query":"内网密码重置","principal_fixture":"employee","evidence_refs":["password-reset-v1#steps"],"acceptable_outcome":"evidence","tags":["操作步骤"]},
+  {"case_id":"it-11","query":"密码到期","principal_fixture":"employee","evidence_refs":["password-expiry-v1#steps"],"acceptable_outcome":"evidence","tags":["操作步骤"]},
+  {"case_id":"it-12","query":"macOS 办公 Wi-Fi","principal_fixture":"employee","evidence_refs":["wifi-mac-v1#steps"],"acceptable_outcome":"evidence","tags":["操作步骤","多词查询"]},
+  {"case_id":"it-13","query":"访客 Wi-Fi","principal_fixture":"employee","evidence_refs":["wifi-guest-v1#steps"],"acceptable_outcome":"evidence","tags":["操作步骤","多词查询"]},
+  {"case_id":"it-14","query":"VPN-104","principal_fixture":"employee","evidence_refs":["vpn-error-v1#steps"],"acceptable_outcome":"evidence","tags":["错误码"]},
+  {"case_id":"it-15","query":"VPN 客户端更新","principal_fixture":"contractor","evidence_refs":["vpn-client-v1#steps"],"acceptable_outcome":"evidence","tags":["操作步骤","多词查询"]},
+  {"case_id":"it-16","query":"BitLocker 恢复密钥","principal_fixture":"employee","evidence_refs":["disk-recovery-v1#steps"],"acceptable_outcome":"evidence","tags":["操作步骤","多词查询"]},
+  {"case_id":"it-17","query":"换了个新机，网页登录还要原来的机子点同意","principal_fixture":"employee","evidence_refs":["mfa-rebind-v2#steps"],"acceptable_outcome":"evidence","tags":["口语改写"]},
+  {"case_id":"it-18","query":"电脑上那串口令记不起来了，想换个新的","principal_fixture":"employee","evidence_refs":["password-reset-v1#steps"],"acceptable_outcome":"evidence","tags":["口语改写"]},
+  {"case_id":"it-19","query":"双面打印纸张卡住怎么办","principal_fixture":"employee","evidence_refs":[],"acceptable_outcome":"empty","tags":["无语料"]},
+  {"case_id":"it-20","query":"运维控制台","principal_fixture":"employee","evidence_refs":[],"acceptable_outcome":"empty","tags":["无可见证据","权限"]}
+]
