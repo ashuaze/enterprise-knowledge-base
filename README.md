@@ -8,6 +8,8 @@
 
 ## 已收录课程
 
+首季 16 期已全部发布。
+
 | 期数 | 主题 | 配套材料 |
 | --- | --- | --- |
 | 01 | [企业知识库如何判定一条搜索结果可以交付？](lessons/enterprise-knowledge-base-ep01.md) | [源码、合成语料与回放](projects/week-01/README.md) |
@@ -22,6 +24,10 @@
 | 10 | [同一个问题，为什么两个人该看到不同结果？](lessons/enterprise-knowledge-base-ep10.md) | 流程图、字段表与场景推演 |
 | 11 | [文档删了，搜索为什么还找得到？](lessons/enterprise-knowledge-base-ep11.md) | 流程图、字段表与场景推演 |
 | 12 | [Wiki 和制度写得不一样，该相信谁？](lessons/enterprise-knowledge-base-ep12.md) | 流程图、字段表与场景推演 |
+| 13 | [答案带了链接，怎么证明链接真的支持答案？](lessons/enterprise-knowledge-base-ep13.md) | 流程图、字段表与验收示例 |
+| 14 | [用户说「这条搜不出来」，怎么把它变成回归测试？](lessons/enterprise-knowledge-base-ep14.md) | 流程图、字段表与验收示例 |
+| 15 | [替换解析器、切片或 Embedding，怎么知道可以上线？](lessons/enterprise-knowledge-base-ep15.md) | 流程图、字段表与验收示例 |
+| 16 | [企业知识库上线后，谁来维护，怎么持续改进？](lessons/enterprise-knowledge-base-ep16.md) | 流程图、字段表与验收示例 |
 
 ## 首季路线
 
