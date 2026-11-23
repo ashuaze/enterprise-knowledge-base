@@ -15,6 +15,10 @@
 | 03 | [从 PDF、图片、表格和办公文档中得到可信内容](lessons/enterprise-knowledge-base-ep03.md) | 正文含核心 TypeScript 示例 |
 | 04 | [内容已经读出来，怎样切成能搜索和引用的证据？](lessons/enterprise-knowledge-base-ep04.md) | 正文含核心 TypeScript 示例 |
 | 05 | [原件、切片和索引各存哪里，什么时候算入库成功？](lessons/enterprise-knowledge-base-ep05.md) | 正文含核心 TypeScript 示例 |
+| 06 | [错误码为什么搜不到？从 BM25 建立词法基线](lessons/enterprise-knowledge-base-ep06.md) | 流程图、字段表与手算示例 |
+| 07 | [向量找到了意思相近的文档，为什么还是没用？](lessons/enterprise-knowledge-base-ep07.md) | 流程图、字段表与手算示例 |
+| 08 | [BM25 和向量怎么合并？先做可解释的混合基线](lessons/enterprise-knowledge-base-ep08.md) | 流程图、字段表与手算示例 |
+| 09 | [重排值不值得上？用延迟预算换排序质量](lessons/enterprise-knowledge-base-ep09.md) | 流程图、字段表与手算示例 |
 
 ## 首季路线
 
