@@ -19,6 +19,9 @@
 | 07 | [向量找到了意思相近的文档，为什么还是没用？](lessons/enterprise-knowledge-base-ep07.md) | 流程图、字段表与手算示例 |
 | 08 | [BM25 和向量怎么合并？先做可解释的混合基线](lessons/enterprise-knowledge-base-ep08.md) | 流程图、字段表与手算示例 |
 | 09 | [重排值不值得上？用延迟预算换排序质量](lessons/enterprise-knowledge-base-ep09.md) | 流程图、字段表与手算示例 |
+| 10 | [同一个问题，为什么两个人该看到不同结果？](lessons/enterprise-knowledge-base-ep10.md) | 流程图、字段表与场景推演 |
+| 11 | [文档删了，搜索为什么还找得到？](lessons/enterprise-knowledge-base-ep11.md) | 流程图、字段表与场景推演 |
+| 12 | [Wiki 和制度写得不一样，该相信谁？](lessons/enterprise-knowledge-base-ep12.md) | 流程图、字段表与场景推演 |
 
 ## 首季路线
 
